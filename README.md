@@ -8,7 +8,7 @@ Proton Pass и генерирует пароль прямо в 1Password. Фор
 письмо подтверждения скилл ловит сам. Пароль не попадает в контекст модели.
 
 ```
-claude plugin marketplace add https://gitlab.com/beCyborg/jadlis-hub.git
+claude plugin marketplace add https://github.com/beCyborg/jadlis-hub.git
 claude plugin install jadlis-signup@jadlis
 ```
 

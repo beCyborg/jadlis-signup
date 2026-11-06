@@ -9,7 +9,7 @@ form, and the skill catches the confirmation mail itself. The password never ent
 context.
 
 ```
-claude plugin marketplace add https://gitlab.com/beCyborg/jadlis-hub.git
+claude plugin marketplace add https://github.com/beCyborg/jadlis-hub.git
 claude plugin install jadlis-signup@jadlis
 ```
 
