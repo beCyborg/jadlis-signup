@@ -2,6 +2,14 @@
 
 Формат: [Keep a Changelog](https://keepachangelog.com/ru/1.1.0/), версии — [SemVer](https://semver.org/lang/ru/).
 
+## [1.0.1] — 2026-11-07 — допускает jadlis-mail 0.3 / allows jadlis-mail 0.3
+
+### Для человека
+- Регистрации теперь работают и с новой почтой jadlis-mail 0.3: раньше зависимость держала почту на 0.2.
+
+### For agents
+- Changed: `.claude-plugin/plugin.json` dependency `jadlis-mail` `^0.2` → `>=0.2.0 <0.4.0` (caret on 0.x excluded 0.3.0, which only adds the opt-in `send_confirmation` option).
+
 ## [Unreleased]
 
 ## [1.0.0] — 2026-11-03 — Первый выпуск / First release
