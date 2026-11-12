@@ -4,6 +4,14 @@
 
 ## [Unreleased]
 
+## [1.0.2] — 2026-11-12 — допускает jadlis-browser 4 / allows jadlis-browser 4
+
+### Для человека
+- Регистрации работают и с браузером jadlis-browser 4.0 (Patchright). Раньше зависимость держала браузер на третьей версии, и обновление молча ставило 3.3.0.
+
+### For agents
+- Changed: `.claude-plugin/plugin.json` dependency `jadlis-browser` `^3` → `>=3.0.0 <5.0.0`. The plugin uses only `agent-chrome.sh` and the `browser-operator` agent file, both unchanged in 4.0.0 (4.0.0 swaps the CDP driver to Patchright MCP and keeps the tool names).
+
 ## [1.0.1] — 2026-11-07 — допускает jadlis-mail 0.3 / allows jadlis-mail 0.3
 
 ### Для человека

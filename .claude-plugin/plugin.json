@@ -1,7 +1,7 @@
 {
   "$schema": "https://json.schemastore.org/claude-code-plugin-manifest.json",
   "name": "jadlis-signup",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "displayName": "Sign-up — агент регистрируется на веб-сервисе",
   "description": "Скилл /signup: Claude спрашивает, какие данные ввести, создаёт отдельный алиас Proton Pass под сервис, генерирует пароль прямо в 1Password, заполняет форму регистрации через browser-operator один раз, ждёт письмо подтверждения и доводит аккаунт до рабочего состояния. Пароль не попадает в контекст модели. Оплату, привязку карты, SMS и CAPTCHA, которую агент не проходит, делает человек. Требует плагины jadlis-secrets, jadlis-mail и jadlis-browser.",
   "author": {
@@ -28,7 +28,7 @@
     },
     {
       "name": "jadlis-browser",
-      "version": "^3"
+      "version": ">=3.0.0 <5.0.0"
     }
   ]
 }
