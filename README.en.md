@@ -49,7 +49,7 @@ with the skill:
 
 | Plugin | What it gives |
 |---|---|
-| `jadlis-secrets` | `op-agent.sh`, `secret-relay.py`, `proton-alias.sh` and the `agent.conf.example` template |
+| `jadlis-secrets` | `op-agent.sh`, `secret-relay.py`, `op-item.py` (since 1.1.0), `proton-alias.sh` and the `agent.conf.example` template |
 | `jadlis-mail` | `mail-wait.sh` and `jm` on top of himalaya: wait for a mail and read it |
 | `jadlis-browser` | the `browser-operator` agent template and `agent-chrome.sh` for its own Chrome profile |
 

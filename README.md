@@ -47,7 +47,7 @@ claude plugin install jadlis-signup@jadlis
 
 | Плагин | Что даёт |
 |---|---|
-| `jadlis-secrets` | `op-agent.sh`, `secret-relay.py`, `proton-alias.sh` и образец `agent.conf.example` |
+| `jadlis-secrets` | `op-agent.sh`, `secret-relay.py`, `op-item.py` (с 1.1.0), `proton-alias.sh` и образец `agent.conf.example` |
 | `jadlis-mail` | `mail-wait.sh` и `jm` поверх himalaya: ждать письмо и читать его |
 | `jadlis-browser` | шаблон агента `browser-operator` и `agent-chrome.sh` для своего профиля Chrome |
 

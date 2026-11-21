@@ -2,11 +2,17 @@
 
 Формат: [Keep a Changelog](https://keepachangelog.com/ru/1.1.0/), версии — [SemVer](https://semver.org/lang/ru/).
 
-## [Unreleased]
+## [1.1.0] — 2026-11-21 — ключи API отдельной записью 1Password / API keys as their own 1Password item
 
-### Technical
+### Для человека
+- Ключ API, который сервис показал после регистрации, агент сохраняет в 1Password отдельной записью «<Сервис> · API key» категории API Credential. Значение лежит во встроенном поле и не попадает в аргументы команды.
+- Отметка «проверено» теперь поле-дата в разделе «Agent» записи.
+- Нужен jadlis-secrets 1.1.0: обнови его и скопируй его скрипты в `~/.claude/scripts/` ещё раз (там новый `op-item.py`).
 
-- API keys from the service go into their own API Credential item through `op-item.py` and `secret-relay.py receive --stdin` (jadlis-secrets, unreleased); the «verified» mark is a date field in section «Agent».
+### For agents
+- Changed: `skills/signup/SKILL.md` step 5 — keys go through `secret-relay.py receive --stdin -- op-item.py create --category "API Credential" --secret credential=stdin` (jadlis-secrets 1.1.0) instead of `op-agent.sh item edit <item> 'api key[password]={}'`; the verified mark is `Agent.verified[date]=<YYYY-MM-DD>` (a custom field always sits in a named section).
+- Changed: `.claude-plugin/plugin.json` dependency `jadlis-secrets` `^1` → `^1.1.0` (`op-item.py`, `receive --stdin`). `jadlis-browser` `>=3.0.0 <5.0.0` already admits 4.1.0.
+- Changed: README dependency table lists `op-item.py` among the jadlis-secrets scripts.
 
 ## [1.0.2] — 2026-11-12 — допускает jadlis-browser 4 / allows jadlis-browser 4
 
