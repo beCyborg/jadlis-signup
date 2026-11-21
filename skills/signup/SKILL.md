@@ -126,8 +126,8 @@ set -a; source ~/.config/jadlis/agent.conf; set +a
 ## 6. Finish
 
 1. Resume the same operator (SendMessage): open the link or enter the code, complete onboarding only as far as the interview allowed (skip tours, decline upsells). Ask for the final URL, the plan shown, and a dashboard screenshot; Read it. No screenshot → the account is "unverified" in the report.
-2. API keys or tokens the service shows go straight to 1Password, not through the context: the operator runs `~/.claude/scripts/secret-relay.py receive -- ~/.claude/scripts/op-agent.sh item edit <item> 'api key[password]={}'` and reports only `{rc, length}`.
-3. Mark the item: `~/.claude/scripts/op-agent.sh item edit "$item" "verified[text]=<YYYY-MM-DD>"`. If the service was not confirmed, skip this and say why.
+2. API keys or tokens the service shows go straight to 1Password, not through the context. Each key is its own «<Service> · API key» item of category API Credential, with the value in the built-in `credential` field (category rules: jadlis-secrets, section «Category and fields»). The operator runs `~/.claude/scripts/secret-relay.py receive --stdin -- ~/.claude/scripts/op-item.py create --op ~/.claude/scripts/op-agent.sh --vault "$OP_VAULT" --category "API Credential" --title "<Service> · API key" --url "<https://service>" --secret credential=stdin` (substitute the literal vault id) and reports only `{rc, length}`. `--stdin` keeps the value off every command line.
+3. Mark the item: `~/.claude/scripts/op-agent.sh item edit "$item" "Agent.verified[date]=<YYYY-MM-DD>"` (a custom field always sits in a named section). If the service was not confirmed, skip this and say why.
 4. Report to the user: service, alias, 1Password item id, plan, what is verified and how (screenshot read, mail found). No password, no full item JSON.
 
 ## Run contract

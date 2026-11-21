@@ -4,6 +4,10 @@
 
 ## [Unreleased]
 
+### Technical
+
+- API keys from the service go into their own API Credential item through `op-item.py` and `secret-relay.py receive --stdin` (jadlis-secrets, unreleased); the «verified» mark is a date field in section «Agent».
+
 ## [1.0.2] — 2026-11-12 — допускает jadlis-browser 4 / allows jadlis-browser 4
 
 ### Для человека
